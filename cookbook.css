@@ -1,0 +1,250 @@
+/* Family Cookbook Styling */
+.cookbook {
+  font-family: 'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.8;
+  color: #1a1a1a;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+/* Title Page Styling */
+.cookbook h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 3.5em;
+  font-weight: 300;
+  text-align: center;
+  margin: 2em 0 0.3em 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 3px double #1a1a1a;
+  padding-bottom: 0.5em;
+}
+
+.cookbook .subtitle {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2em;
+  color: #4a4a4a;
+  margin-bottom: 3em;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+
+/* Section Headers */
+.cookbook h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.2em;
+  font-weight: 400;
+  margin: 2.5em 0 1em 0;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #1a1a1a;
+  letter-spacing: 0.02em;
+}
+
+/* Recipe Title */
+.cookbook h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2em;
+  font-weight: 500;
+  margin: 2em 0 0.5em 0;
+  letter-spacing: 0.01em;
+}
+
+/* Subheadings (Ingredients, Instructions) */
+.cookbook h4 {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 1.5em 0 0.8em 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1.1em;
+}
+
+/* Recipe Metadata */
+.cookbook .recipe-meta {
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5em 0;
+  padding: 1em;
+  background: #f8f8f8;
+  border-left: 4px solid #1a1a1a;
+  border-right: 4px solid #1a1a1a;
+  font-size: 0.95em;
+}
+
+.cookbook .recipe-meta strong {
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+/* Recipe Origin/Story */
+.cookbook .recipe-origin {
+  font-style: italic;
+  color: #4a4a4a;
+  margin: 1em 0;
+  padding: 1em;
+  border-left: 3px solid #d0d0d0;
+  background: #fafafa;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+/* Ingredient Lists */
+.cookbook ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1em 0;
+}
+
+.cookbook ul li {
+  padding: 0.4em 0 0.4em 2em;
+  position: relative;
+  line-height: 1.6;
+}
+
+.cookbook ul li::before {
+  content: "▪";
+  position: absolute;
+  left: 0.5em;
+  font-size: 1.2em;
+  color: #1a1a1a;
+}
+
+/* Instruction Lists */
+.cookbook ol {
+  counter-reset: step-counter;
+  list-style: none;
+  padding-left: 0;
+  margin: 1em 0;
+}
+
+.cookbook ol li {
+  counter-increment: step-counter;
+  padding: 0.8em 0 0.8em 3.5em;
+  position: relative;
+  line-height: 1.7;
+  margin-bottom: 0.8em;
+}
+
+.cookbook ol li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 2.2em;
+  height: 2.2em;
+  border: 2px solid #1a1a1a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9em;
+  background: #ffffff;
+}
+
+/* Notes Section */
+.cookbook .notes-section {
+  margin: 2em 0;
+  padding: 1.5em;
+  border: 2px solid #1a1a1a;
+  background: #fafafa;
+}
+
+.cookbook .notes-section h4 {
+  margin-top: 0;
+  border-bottom: 1px solid #d0d0d0;
+  padding-bottom: 0.5em;
+}
+
+/* Dividers */
+.cookbook hr {
+  border: none;
+  border-top: 1px solid #d0d0d0;
+  margin: 3em 0;
+  position: relative;
+}
+
+.cookbook hr::after {
+  content: "❖";
+  position: absolute;
+  left: 50%;
+  top: -0.6em;
+  transform: translateX(-50%);
+  background: #ffffff;
+  padding: 0 1em;
+  color: #1a1a1a;
+  font-size: 0.9em;
+}
+
+/* Table of Contents */
+.cookbook .toc {
+  background: #f8f8f8;
+  padding: 2em;
+  margin: 2em 0;
+  border: 1px solid #d0d0d0;
+}
+
+.cookbook .toc h2 {
+  border-bottom: 2px solid #1a1a1a;
+  margin-top: 0;
+}
+
+.cookbook .toc ul {
+  columns: 2;
+  column-gap: 2em;
+}
+
+.cookbook .toc ul li {
+  padding: 0.3em 0;
+  break-inside: avoid;
+}
+
+/* Strong emphasis */
+.cookbook strong {
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Blockquotes for chef's notes */
+.cookbook blockquote {
+  border-left: 4px solid #1a1a1a;
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  background: #fafafa;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+.cookbook blockquote p {
+  margin: 0;
+}
+
+/* Template Placeholder Styling */
+.cookbook .template-placeholder {
+  background: #f0f0f0;
+  border: 2px dashed #999;
+  padding: 0.5em 1em;
+  color: #666;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* Page Breaks for Printing */
+@media print {
+  .cookbook h2 {
+    page-break-before: always;
+  }
+  
+  .cookbook h3 {
+    page-break-after: avoid;
+  }
+  
+  .cookbook .recipe-meta {
+    page-break-inside: avoid;
+  }
+}
