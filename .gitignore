@@ -1,0 +1,36 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# OCR temporary files
+*_ocr.txt
+debug_*.jpg
+debug_*.png
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.bak
+
+# Processed recipe images (optional - uncomment if you don't want to track these)
+assets/processed_images/
+assets/recipe_images/
+
+# Personal recipe markdown (optional - uncomment if you want to keep recipes private)
+# assets/markdown/
