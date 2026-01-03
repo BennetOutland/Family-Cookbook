@@ -7,7 +7,21 @@
 - Follow the section for making markdown files
 
 
-## How to Generate Markdown Files
+## How to Generate Markdown Files 
+
+### Install and Setup Ollama 
+
+The download is: https://ollama.com/download 
+
+Then download a model:
+
+```bash
+# If this errors, ollama is probably already running
+ollama serve 
+
+# Pull the Llama model
+ollama pull llama3.1:8b
+```
 
 ### Create Virtual Environment
 
@@ -42,6 +56,19 @@ pip install -r requirements.txt
 python3 -c "import easyocr, cv2, requests; print('✓ All packages installed successfully')"
 ```
 
+### Create Directories 
+
+git does not allow pushing empty directories (this was done for space reasons), so you need to create them:
+
+```bash
+# Go into the assets folder
+cd assets
+
+# Make the image folders
+mkdir recipe_images
+mkdir processed_images
+```
+
 ### Usage
 
 Every time you want to use the scripts:
@@ -63,7 +90,7 @@ deactivate
 - The virtual environment folder (`venv/`) is ignored by git
 - First-time installation downloads EasyOCR models (~100MB) automatically
 - Always activate the virtual environment before running scripts
-
+- Make sure you have at least 15 GB free!
 
 
 ## Generating the Cookbook
